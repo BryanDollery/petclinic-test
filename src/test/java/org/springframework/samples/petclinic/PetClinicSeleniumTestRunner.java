@@ -3,6 +3,9 @@ package org.springframework.samples.petclinic;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
+import org.testcontainers.containers.DockerComposeContainer;
+
+import java.io.File;
 
 import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 import static java.util.logging.Level.SEVERE;
@@ -21,5 +24,10 @@ public class PetClinicSeleniumTestRunner {
         System.setProperty("webdriver.chrome.silentOutput", "true");
         getLogger("org.openqa.selenium").setLevel(SEVERE);
     }
+
+
+    public static DockerComposeContainer environment = new DockerComposeContainer(new File("c:/Users/bryan/git/bryandollery/petclinic/docker-compose.yaml"));
+
+    
 
 }
