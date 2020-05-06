@@ -1,4 +1,4 @@
-package org.springframework.samples.petclinic.steps;
+package org.springframework.samples.petclinic.steps.owner;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -9,15 +9,17 @@ public class AddOwnerSteps {
 
     @Given("I am on the add-owner form")
     public void iAmOnTheAddOwnerForm() {
-
+        System.out.println("wibble iAmOnTheAddOwnerForm");
     }
 
-    @When("I enter valid data")
+    @When("I enter valid owner data")
     public void iEnterValidData() {
+        System.out.println("wibble iEnterValidData");
     }
 
     @Then("Each field will have a tick on the right")
     public void eachFieldWillHaveATickOnTheRight() {
+        System.out.println("wibble eachFieldWillHaveATickOnTheRight");
     }
 
     @When("I submit the form")
@@ -44,8 +46,12 @@ public class AddOwnerSteps {
     public void validateMinLengthErrorMessage() {
     }
 
-    @And(".* field has an 'x' at the end")
+    @And("Each field has an x at the end")
     public void validateIncorrectInputErrorSymbol() {
+    }
+
+    @And("The field has an x at the end")
+    public void validateIncorrectInputErrorSymbols() {
     }
 
     @And("I enter then remove values from each field")
